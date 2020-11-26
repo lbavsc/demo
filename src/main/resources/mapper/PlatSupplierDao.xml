@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.gy.plat.dao.PlatSupplierDao">
+
+    <resultMap id="PlatSupplierRecord" type="io.gy.plat.entity.ApplyRecordEntity">
+        <result column="status" property="status"/>
+        <result column="craete_time" property="craeteTime"/>
+        <result column="plat_approve_time" property="platApproveTime"/>
+        <result column="apply_reason" property="applyReason"/>
+    </resultMap>
+
+    <select id="getPlatSupplierRecord" resultMap="PlatSupplierRecord">
+       select `status`,`craete_time`,`plat_approve_time`,`apply_reason` from plat_supplier
+    </select>
+
+</mapper>
