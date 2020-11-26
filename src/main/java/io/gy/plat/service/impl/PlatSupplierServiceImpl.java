@@ -24,6 +24,7 @@ import java.util.Map;
 public class PlatSupplierServiceImpl extends ServiceImpl<PlatSupplierDao, PlatSupplierEntity> implements PlatSupplierService {
     private final int APPLY_TYPE_PLAT_SUPPLIER = 1;
 
+    @Override
     public List<ApplyRecordEntity> listRecord() {
         List<ApplyRecordEntity> applyRecordList = baseMapper.getPlatSupplierRecord();
         applyRecordList.forEach(p -> p.setApplyType(APPLY_TYPE_PLAT_SUPPLIER));

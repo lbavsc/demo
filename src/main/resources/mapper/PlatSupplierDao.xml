@@ -10,7 +10,7 @@
     </resultMap>
 
     <select id="getPlatSupplierRecord" resultMap="PlatSupplierRecord">
-       select `status`,`craete_time`,`plat_approve_time`,`apply_reason` from plat_supplier
+       select `status`,`craete_time`,`plat_approve_time`,`apply_reason` from `plat_supplier`
     </select>
 
 </mapper>

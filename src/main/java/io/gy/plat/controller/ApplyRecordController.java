@@ -13,6 +13,11 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 获取申请记录
+ * @author ${author}
+ * @since 2020-11-25
+ */
 @RestController
 @RequestMapping("/apply")
 public class ApplyRecordController {
@@ -23,7 +28,7 @@ public class ApplyRecordController {
     private PlatSupplierService platSupplierService;
 
     @GetMapping("/all")
-    public ResultEntity RecordAll() throws Exception {
+    public ResultEntity recordAll() throws Exception {
 
         List<ApplyRecordEntity> result = new ArrayList<>();
         result.addAll(platCategorySpecialistService.listRecord());

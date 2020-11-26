@@ -5,6 +5,8 @@ import lombok.Data;
 /**
  * 通用返回数据类
  * @param <T>
+ * @author ${author}
+ * @since 2020-11-25
  */
 @Data
 public class ResultEntity<T> {

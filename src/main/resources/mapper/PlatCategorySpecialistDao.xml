@@ -2,12 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="io.gy.plat.dao.PlatCategorySpecialistDao">
 
-<!--    <resultMap id="PlatCategorySpecialistRecord" type="java.util.HashMap">-->
-<!--        <result column="status" property="status"/>-->
-<!--        <result column="craete_time" property="craeteTime"/>-->
-<!--        <result column="plat_approve_time" property="platApproveTime"/>-->
-<!--    </resultMap>-->
-
     <resultMap id="PlatCategorySpecialistRecord" type="io.gy.plat.entity.ApplyRecordEntity">
         <result column="status" property="status"/>
         <result column="craete_time" property="craeteTime"/>
@@ -15,7 +9,6 @@
     </resultMap>
 
     <select id="getPlatCategorySpecialistRecord" resultMap="PlatCategorySpecialistRecord">
-       select `status`,`craete_time`,`plat_approve_time` from plat_category_specialist
+       select `status`,`craete_time`,`plat_approve_time` from `plat_category_specialist`
     </select>
-
 </mapper>

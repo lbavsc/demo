@@ -2,6 +2,11 @@ package io.gy.plat.util;
 
 import io.gy.plat.entity.ResultEntity;
 
+/**
+ * 通用返回工具类
+ * @author ${author}
+ * @since 2020-11-25
+ */
 public class ResultUtil {
 
     /**

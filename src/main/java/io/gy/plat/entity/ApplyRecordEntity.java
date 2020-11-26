@@ -6,7 +6,8 @@ import java.util.Date;
 
 /**
  * 申请列表信息
- *
+ * @author ${author}
+ * @since 2020-11-25
  */
 @Data
 public class ApplyRecordEntity {
