@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * <p>
@@ -19,12 +20,13 @@ import lombok.EqualsAndHashCode;
  * @since 2020-11-25
  */
 @Data
+@ToString
 @EqualsAndHashCode(callSuper = false)
 @TableName("plat_supplier")
 @ApiModel(value = "PlatSupplier对象", description = "供应商表")
 public class PlatSupplierEntity implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1173586248741535281L;
 
     @TableId(value = "id", type = IdType.ID_WORKER)
     private Integer id;
@@ -52,6 +54,5 @@ public class PlatSupplierEntity implements Serializable {
 
     @ApiModelProperty(value = "申请理由")
     private String applyReason;
-
 
 }

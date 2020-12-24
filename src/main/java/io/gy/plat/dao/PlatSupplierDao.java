@@ -3,6 +3,7 @@ package io.gy.plat.dao;
 import io.gy.plat.entity.ApplyRecordEntity;
 import io.gy.plat.entity.PlatSupplierEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Map;
  * @author ${author}
  * @since 2020-11-25
  */
-@Repository
+@Mapper
 public interface PlatSupplierDao extends BaseMapper<PlatSupplierEntity> {
     /**
      * 获取供应商申请列表

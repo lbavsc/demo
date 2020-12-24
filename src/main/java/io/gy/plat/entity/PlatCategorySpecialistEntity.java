@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * <p>
@@ -19,12 +20,13 @@ import lombok.EqualsAndHashCode;
  * @since 2020-11-25
  */
 @Data
+@ToString
 @EqualsAndHashCode(callSuper = false)
 @TableName("plat_category_specialist")
 @ApiModel(value = "PlatCategorySpecialist对象", description = "领域专家")
 public class PlatCategorySpecialistEntity implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1883820189478836023L;
 
     @TableId(value = "id", type = IdType.ID_WORKER)
     private Integer id;
@@ -48,6 +50,4 @@ public class PlatCategorySpecialistEntity implements Serializable {
 
     @ApiModelProperty(value = "证书地址")
     private String fileUrl;
-
-
 }

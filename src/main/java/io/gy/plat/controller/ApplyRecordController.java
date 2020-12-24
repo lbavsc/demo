@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
  * 获取申请记录
+ *
  * @author ${author}
  * @since 2020-11-25
  */
@@ -28,12 +30,20 @@ public class ApplyRecordController {
     private PlatSupplierService platSupplierService;
 
     @GetMapping("/all")
-    public ResultEntity recordAll() throws Exception {
+    public ResultEntity recordAll() {
 
-        List<ApplyRecordEntity> result = new ArrayList<>();
-        result.addAll(platCategorySpecialistService.listRecord());
-        result.addAll(platSupplierService.listRecord());
+        try {
+            List<ApplyRecordEntity> result = new ArrayList<>();
+            result.addAll(platCategorySpecialistService.listRecord());
+            result.addAll(platSupplierService.listRecord());
+            result.sort(Comparator.nullsFirst(Comparator.comparing(ApplyRecordEntity::getCraeteTime).reversed()));
+            return ResultUtil.success(result);
 
-        return ResultUtil.success(result);
+        } catch (Exception e) {
+            return ResultUtil.error("1001", "系统发生错误,请联系管理员");
+        }
+
     }
+
+
 }

@@ -22,7 +22,7 @@ import java.util.Map;
  */
 @Service
 public class PlatSupplierServiceImpl extends ServiceImpl<PlatSupplierDao, PlatSupplierEntity> implements PlatSupplierService {
-    private final int APPLY_TYPE_PLAT_SUPPLIER = 1;
+    private static final int APPLY_TYPE_PLAT_SUPPLIER = 1;
 
     @Override
     public List<ApplyRecordEntity> listRecord() {

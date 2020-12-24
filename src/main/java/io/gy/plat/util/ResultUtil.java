@@ -14,8 +14,8 @@ public class ResultUtil {
      **/
     public static ResultEntity success(Object object) {
         ResultEntity resultEntity = new ResultEntity();
-        resultEntity.setCode(ResultEnum.SUCCESS.getCode());
-        resultEntity.setMsg(ResultEnum.SUCCESS.getMsg());
+        resultEntity.setCode(ResultCodeEnum.SUCCESS.getCode());
+        resultEntity.setMsg(ResultCodeEnum.SUCCESS.getMsg());
         resultEntity.setData(object);
         return resultEntity;
     }
@@ -24,14 +24,17 @@ public class ResultUtil {
      * 成功但不带数据
      **/
     public static ResultEntity success() {
-
-        return success(null);
+        ResultEntity resultEntity = new ResultEntity();
+        resultEntity.setCode(ResultCodeEnum.SUCCESS.getCode());
+        resultEntity.setMsg(ResultCodeEnum.SUCCESS.getMsg());
+        resultEntity.setData(null);
+        return resultEntity;
     }
 
     /**
      * 失败
      **/
-    public static ResultEntity error(Integer code, String msg) {
+    public static ResultEntity error(String code, String msg) {
         ResultEntity resultEntity = new ResultEntity();
         resultEntity.setCode(code);
         resultEntity.setMsg(msg);

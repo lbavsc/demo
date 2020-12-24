@@ -3,7 +3,7 @@ package io.gy.plat.dao;
 import io.gy.plat.entity.ApplyRecordEntity;
 import io.gy.plat.entity.PlatCategorySpecialistEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
  * @author ${author}
  * @since 2020-11-25
  */
-@Repository
+@Mapper
 public interface PlatCategorySpecialistDao extends BaseMapper<PlatCategorySpecialistEntity> {
     /**
      * 获取领域专家申请列表
